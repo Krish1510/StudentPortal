@@ -1,0 +1,18 @@
+{% extends 'htmlfolder/base.html' %} 
+{% load static %} 
+{% block content %}
+<div class=" container">
+    <form method="POST">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Edit Homework</legend>
+            {{form.as_p}}
+            {% csrf_token %}
+        </fieldset>
+        <div class="form-group">
+            <button href="" class="btn btn-outline-info" type="submit">
+                save
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
